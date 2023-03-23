@@ -25,7 +25,7 @@
         <input
           type="radio"
           id="ice-cream-yes"
-          name="ice-cream"
+          name="icecream"
           value="yes"
           required="required"
         />
@@ -36,7 +36,7 @@
         <input
           type="radio"
           id="ice-cream-no"
-          name="ice-cream"
+          name="icecream"
           value="no"
           required="required"
         />
@@ -50,7 +50,7 @@
         <input
           type="checkbox"
           id="for-football"
-          name="activities"
+          name="sports"
           value="football"
         />
         Football
@@ -60,7 +60,7 @@
         <input
           type="checkbox"
           id="for-basketball"
-          name="activities"
+          name="sports"
           value="basketball"
         />
         Basketball
@@ -70,7 +70,7 @@
         <input
           type="checkbox"
           id="for-wrestling"
-          name="activities"
+          name="sports"
           value="wrestling"
         />
         Wrestling
@@ -80,7 +80,7 @@
         <input
           type="checkbox"
           id="for-baseball"
-          name="activities"
+          name="sports"
           value="baseball"
         />
         Baseball
@@ -90,7 +90,7 @@
         <input
           type="checkbox"
           id="for-gymnastics"
-          name="activities"
+          name="sports"
           value="gymnatics"
         />
         Gymnatics
@@ -108,9 +108,9 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Favorite Ice Cream</th>
-        <th>Read for Fun</th>
-        <th>Favorite Activities</th>
+        <th>Favorite Building</th>
+        <th>Ice cream lover</th>
+        <th>Favorite Hawkeye Sports</th>
       </tr>
     </thead>
 
@@ -118,9 +118,9 @@
       {% for friend in friends %}
       <tr>
         <td>{{ friend.name }}</td>
-        <td>{{ friend.flavor }}</td>
-        <td>{{ friend.read }}</td>
-        <td>{{ friend.activities }}</td>
+        <td>{{ friend.classroom }}</td>
+        <td>{{ friend.icecream }}</td>
+        <td>{{ friend.sports }}</td>
       </tr>
       {% endfor %}
     </tbody>
