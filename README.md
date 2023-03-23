@@ -1,5 +1,10 @@
 # Flask Web Form Template
 
+Created by Bryce Barnett, Drew Hartwig, Tommy Melles
+
+This project is a web form that surveys users about their favorite Uiowa building, whether they like ice cream, and their favorite hawkeye sports
+the webform saves the information entered into a database.
+
 Basic structure for starting a Flask web form project with Jinja templates
 
 ---
