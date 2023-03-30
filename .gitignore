@@ -1,8 +1,14 @@
+# hidden Mac file of cached metadata when Finder is used to browse folders
+.DS_Store
+
+#VS Code workspace file
+.VSCode
+
+#Python dotenv file
+.env
+
 #Virtual Environment
 venv/
-
-# Secrets file with database connection details
-secrets.py
 
 # Flask
 instance/*
