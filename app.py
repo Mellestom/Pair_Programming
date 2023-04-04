@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 friends_dict = [
-    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
+    {}
 ]
 
 
@@ -28,22 +28,22 @@ def add():
         form = request.form
 
         fname = form["fname"]
-        flavor = form["flavor"]
-        read = form["read"]
-        activities = form.getlist("activities")  # this is a PYthon list
+        classroom = form["classroom"]
+        icecream = form["icecream"]
+        sports = form.getlist("sports")  # this is a PYthon list
 
         print(fname)
-        print(flavor)
-        print(read)
-        print(activities)
+        print(classroom)
+        print(icecream)
+        print(sports)
 
-        activities_string = ", ".join(activities)  # make the Python list into a string
+        activities_string = ", ".join(sports)  # make the Python list into a string
 
         friend_dict = {
             "name": fname,
-            "flavor": flavor,
-            "read": read,
-            "activities": activities_string,
+            "classroom": classroom,
+            "icecream": icecream,
+            "sports": activities_string,
         }
 
         print(friend_dict)
