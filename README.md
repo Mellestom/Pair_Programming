@@ -1,5 +1,10 @@
 # Flask Web Form Template
 
+Created by Bryce Barnett, Drew Hartwig, Tommy Melles
+
+This project is a web form that surveys users about their favorite Uiowa building, whether they like ice cream, and their favorite hawkeye sports
+the webform saves the information entered into a database.
+
 Basic structure for starting a Flask web form project with Jinja templates
 
 ---
@@ -29,18 +34,7 @@ Basic structure for starting a Flask web form project with Jinja templates
    - `flask run`
    - `python app.py`
 
-9. Test the application by visiting it in your web browser
+9. Test the application by visiting it in your web browser and visting "http://localhost:5000"
 
 10. If everything is working, commit to your repository as an initial commit.
 
-11. Create and change to a new local development branch `git checkout b development`
-
-12. Continue working with the project as you normally would.
-
-### TO-DO
-
-- [x] Catch all selected activities in /add and put them into the python dictionary
-- [ ] Create a confirmation page before submitting
-- [ ] Submit records to database
-- [ ] Delete a record
-- [ ] Update a record
