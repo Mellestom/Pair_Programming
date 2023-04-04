@@ -1,112 +1,81 @@
 {% extends 'base.html' %} {% block body %}
-<h2>Digital Product Management - Web Form Template</h2>
+<h1>Digital Product Management - Web Form Template</h1>
 <hr />
 <head> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <main>
   <form action="/add" method="POST">
-    <p>
+    <div>
       <label for="first-name">First name:</label>
       <input type="text" id="first-name" name="fname" />
-    </p>
+    </div>
 
-    <p>
-      <label for="building">
-        Favorite classroom building at the University of Iowa:
-        <select name="classroom" id="building" required>
-          <option value="" selected>Choose one ...</option>
-          <option value="tippie">John Papa John Business Building</option>
-          <option value="trowbridge">Trowbridge Hall</option>
-          <option value="pomerantz">Pomerantz Center</option>
-        </select>
-      </label>
-    </p>
-    <p>
-      <label>Do you like to eat ice cream?</label>
-      <label for="ice-cream-yes">
-        <input
-          type="radio"
-          id="ice-cream-yes"
-          name="icecream"
-          value="yes"
-          required="required"
-        />
+
+<h4>What is your favorite building on campus?</h4>
+    <select name='classroom' id='building' class="form-select" aria-label="Default select example" required>
+      <option selected>Select one of the following options</option>
+      <option value="PBB">John Papa John Business Building</option>
+      <option value="TH">Trowbridge Hall</option>
+      <option value="PC">The Pomerantz Center</option>
+    </select>
+
+<p></p>
+
+    <h4>Do you like to eat ice cream? Yes or No.</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="icecream" id="ice-cream-yes" value="Yes">
+      <label class="form-check-label" for="ice-cream-yes" value="yes">
         Yes
       </label>
-
-      <label for="ice-cream-no">
-        <input
-          type="radio"
-          id="ice-cream-no"
-          name="icecream"
-          value="no"
-          required="required"
-        />
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="icecream" id="ice-cream-no" value="No">
+      <label class="form-check-label" for="ice-cream-no" value="no">
         No
       </label>
-    </p>
+    </div>
 
-    <fieldset>
-      <legend>Choose your favorite Iowa Hawkeye sports teams</legend>
-      <label for="for-football">
-        <input
-          type="checkbox"
-          id="for-football"
-          name="sports"
-          value="football"
-        />
+    <h4>Which of the following Hawkeye sports teams do you follow?</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Football" id="for-football" name="sports">
+      <label class="form-check-label" for="for-football" name="sports">
         Football
       </label>
-
-      <label for="for-basketball">
-        <input
-          type="checkbox"
-          id="for-basketball"
-          name="sports"
-          value="basketball"
-        />
-        Basketball
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Basketball" id="for-basketball" name="sports">
+      <label class="form-check-label" for="for-basketball" name="sports">
+        basketball
       </label>
-
-      <label for="for-wrestling">
-        <input
-          type="checkbox"
-          id="for-wrestling"
-          name="sports"
-          value="wrestling"
-        />
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Wrestling" id="for-wrestling" name="sports">
+      <label class="form-check-label" for="for-wrestling" name="sports">
         Wrestling
       </label>
-
-      <label for="for-baseball">
-        <input
-          type="checkbox"
-          id="for-baseball"
-          name="sports"
-          value="baseball"
-        />
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Gymnatics" id="for-gymnastics" name="sports">
+      <label class="form-check-label" for="for-gymnastics" name="sports">
+        Gymnastics
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Baseball" id="for-baseball" name="sports">
+      <label class="form-check-label" for="for-baseball" name="sports">
         Baseball
       </label>
+    </div>
+  
 
-      <label for="for-gymnastics">
-        <input
-          type="checkbox"
-          id="for-gymnastics"
-          name="sports"
-          value="gymnatics"
-        />
-        Gymnatics
-      </label>
-    </fieldset>
-
-    <p><input type="submit" id="submit" value="Submit" /></p>
+    <div><input type="submit" class="btn btn-primary" id="submit" value="Submit" /></div>
   </form>
 
   <br /><br />
   {% if friends %}
   <h3>Friend List</h3>
   <hr />
-  <table border="1">
+  <table class="table table-dark table-striped">
     <thead>
       <tr>
         <th>Name</th>
