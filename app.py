@@ -20,7 +20,6 @@ def internal_error(error):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    flash('Record successfully added.', 'success')
     return render_template(
         "index.html", pageTitle="Web form template", friends=friends_dict
     )
@@ -63,6 +62,7 @@ def add():
             friend_dict
         )  # append this dictionary entry to the larger friends dictionary
         print(friends_dict)
+        flash('Record successfully added.', 'success')
         return redirect(url_for("index"))
     else:
         return redirect(url_for("index"))
